@@ -217,9 +217,9 @@ namespace PrtgAPI
 
         private static InputType GetInputType(string input)
         {
-            if (Regex.Match(input, "radio").Success)
+            if (Regex.Match(input, "type=.radio.").Success)
                 return InputType.Radio;
-            if (Regex.Match(input, "checkbox").Success)
+            if (Regex.Match(input, "type=.checkbox.").Success)
                 return InputType.Checkbox;
             return InputType.Other;
         }
